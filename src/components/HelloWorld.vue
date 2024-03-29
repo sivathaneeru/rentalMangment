@@ -7,23 +7,32 @@
 
     <v-navigation-drawer app :value="drawerVisible">
       <v-list v-if="drawerVisible">
-        <v-list-item>
-          <v-list-item-title>Home</v-list-item-title>
+        <v-list-item to="/home">
+          <v-list-item-title>bill</v-list-item-title>
         </v-list-item>
-        <v-list-item>
-          <v-list-item-title>About</v-list-item-title>
+        <v-list-item to="/contactUs">
+          <v-list-item-title>payments</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
     <v-main>
-      <p>This is the main content area.</p>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
+// import AboutPage from "./AboutPage"
+// import ContactusPage from "./ContactusPage"
+//import mappings from '@/mappings';
 export default {
+
+  components:{
+    // AboutPage,
+    // ContactusPage,
+
+  },
   data() {
     return {
       drawerVisible: false,
