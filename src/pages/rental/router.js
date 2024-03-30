@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
-import AboutPage from "./components/AboutPage";
-import ContactusPage from "./components/ContactusPage.vue";
+import AboutPage from "@/components/AboutPage";
+import ContactusPage from "@/components/ContactusPage.vue";
 //import mappings from "./mappings";
 Vue.use(Router)
 
