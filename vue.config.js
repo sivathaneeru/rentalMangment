@@ -20,13 +20,20 @@ module.exports = {
       template: "public/login.html",
       filename: "login.html",
     },
+    error:{
+      entry: "src/pages/error/error.js",
+      template: "public/error.html",
+      filename: "error.html",
+    }
   },
   devServer: {
-    port: 9000,
+    port: 8084,
     historyApiFallback: {
       rewrites: [
-        { from: /^\/rental$/, to: '/rental.html' },
-        { from: /^\/login$/, to: '/login.html' }
+        { from: /^\/rental/, to: '/rental.html' },
+        { from: /^\/login/, to: '/login.html' },
+         { from: /^\/$/, to: '/login.html' },
+        { from: /.*/, to: '/error.html' }
       ]
     }
   },

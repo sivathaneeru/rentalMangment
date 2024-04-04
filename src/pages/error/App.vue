@@ -1,11 +1,6 @@
 <template>
     <v-container>
-      <v-form @submit.prevent="login">
-        <center>Login </center>
-        <v-text-field v-model="username" label="Username" required></v-text-field>
-        <v-text-field v-model="password" label="Password" type="password" required></v-text-field>
-        <v-btn type="submit" color="primary">Login</v-btn>
-      </v-form>
+     Some thing went wrong 
     </v-container>
   </template>
   
