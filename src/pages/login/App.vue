@@ -5,12 +5,14 @@
         <v-text-field v-model="username" label="Username" required></v-text-field>
         <v-text-field v-model="password" label="Password" type="password" required></v-text-field>
         <v-btn type="submit" color="primary">Login</v-btn>
+        <v-btn color="primary" @click="register">Register</v-btn>
       </v-form>
     </v-container>
   </template>
   
   <script>
 import mappings from '../../mappings';
+import constants from '../../services/constants';
 //import environment from '../../services/environment';
   export default {
     data() {
@@ -31,8 +33,12 @@ import mappings from '../../mappings';
         console.log('Password:', this.password);
         // After successful login, redirect user or perform appropriate action
      //  const base= environment.BASE_URL;
-       window.location.href = "rental#"+mappings.ABOUT;
+       window.location.href = constants.RENTAL_PAGE_PREFIX+mappings.ABOUT;
         //this.$router.push(base+); // Example: Redirect to dashboard page
+      },
+
+      register(){
+        window.location.href = "login#"+mappings.REGISTRATION;
       }
     }
   }

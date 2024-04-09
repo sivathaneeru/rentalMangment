@@ -10,6 +10,11 @@ module.exports = {
     devtool: 'source-map',
   },
   pages: {
+    landingPage:{
+      entry: "src/pages/landingPage/landingPage.js",
+      template: "public/landingPage.html",
+      filename: "landingPage.html",
+    },
     rental: {
       entry: "src/pages/rental/rental.js",
       template: "public/rental.html",
@@ -19,6 +24,11 @@ module.exports = {
       entry: "src/pages/login/login.js",
       template: "public/login.html",
       filename: "login.html",
+    },
+    registration:{
+      entry: "src/pages/signin/login.js",
+      template: "public/registration.html",
+      filename: "registration.html",
     },
     error:{
       entry: "src/pages/error/error.js",
@@ -30,9 +40,12 @@ module.exports = {
     port: 8084,
     historyApiFallback: {
       rewrites: [
+        
         { from: /^\/rental/, to: '/rental.html' },
         { from: /^\/login/, to: '/login.html' },
-         { from: /^\/$/, to: '/login.html' },
+        { from: /^\/registration/, to: '/registration.html' },
+        //  { from: /^\/$/, to: '/login.html' },
+         { from: /^/, to: '/landingPage.html' },
         { from: /.*/, to: '/error.html' }
       ]
     }

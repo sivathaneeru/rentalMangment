@@ -7,6 +7,7 @@ export default{
 
     HOME:"/home",
     ABOUT:"/contactUs",
-
+    REGISTRATION:"/registration"
+    
 
 }

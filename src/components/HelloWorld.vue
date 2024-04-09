@@ -1,8 +1,11 @@
 <template>
   <v-app>
     <v-app-bar app>
-      <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>My App</v-toolbar-title>
+      <v-app-bar-nav-icon @click="toggleDrawer">
+        <i class="mdi mdi-menu icon-20" ></i>
+      </v-app-bar-nav-icon>
+      <v-toolbar-title>
+        My App</v-toolbar-title>
     </v-app-bar>
 
     <v-navigation-drawer app :value="drawerVisible">
@@ -20,12 +23,16 @@
       <router-view></router-view>
     </v-main>
   </v-app>
+ 
+
 </template>
 
 <script>
 // import AboutPage from "./AboutPage"
 // import ContactusPage from "./ContactusPage"
 //import mappings from '@/mappings';
+import 'vuetify/dist/vuetify';
+
 export default {
 
   components:{

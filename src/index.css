@@ -1,3 +1,9 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+.icon-20{
+    font-size: 20px;
+}
+
+
